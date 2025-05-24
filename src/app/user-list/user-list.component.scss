@@ -1,0 +1,128 @@
+.userlist-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.filter-input {
+    padding: 8px;
+    width: 250px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.add-btn {
+    padding: 8px 16px;
+    background-color: #2d89ef;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: #1e65c1;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.user-table th,
+.user-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.user-table th {
+    background-color: #f5f5f5;
+}
+
+.action-icon {
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.action-icon.edit {
+    color: #4caf50;
+}
+
+.action-icon.delete {
+    color: #f44336;
+}
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    margin-right: 8px;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.icon-button i {
+    pointer-events: none;
+}
+
+.icon-button.edit:hover {
+    background-color: #e6f4ea;
+    color: #388e3c;
+}
+
+.icon-button.delete:hover {
+    background-color: #fdecea;
+    color: #d32f2f;
+}
+.avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+.avatar-img:hover {
+    transform: scale(1.1);
+}
+.table-container {
+    max-height: 400px;
+    /* Limit height */
+    overflow-y: auto;
+    /* Enable vertical scroll */
+    border: 1px solid #ccc;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.user-table th,
+.user-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-table thead th {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    /* Needed for sticky effect */
+    z-index: 2;
+}
+
+.avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}

@@ -1,0 +1,25 @@
+<div class="main">
+
+
+    <aside [class]="sidebarOpen?'sidebar':'sidebar-close'">
+        <nav>
+            <ul class="sidebar-menu-icon">
+                <i class="bi bi-list" (click)="toggleSidebar()" *ngIf="!sidebarOpen"></i>
+                <i class="bi bi-x-lg" (click)="toggleSidebar()" *ngIf="sidebarOpen"></i>
+            </ul>
+            <ul>
+                <li (click)="NavigateTo('userlist')"> <i class="bi bi-card-list me-2"></i><a
+                        routerLinkActive="active">User List</a></li>
+                <li (click)="NavigateTo('Adduser')"><i class="bi bi-person-add me-2"></i><a
+                        routerLinkActive="active">Add User</a></li>
+                <li id="logout" (click)="logout()">
+                    <i class="bi bi-box-arrow-right me-2"></i> <span>Logout</span>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content" [style]="sidebarOpen?'width:80%':'width:95%'">
+        <router-outlet></router-outlet>
+    </main>
+</div>

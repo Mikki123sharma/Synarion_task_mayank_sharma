@@ -1,0 +1,37 @@
+<div class="form-container">
+    <h2>Add / Update User</h2>
+    <form (ngSubmit)="onSubmit(userForm)" #userForm="ngForm" novalidate>
+
+        <input type="text" name="name" [(ngModel)]="user.name" placeholder="Name" required #name="ngModel" />
+        <div class="error" *ngIf="name.invalid && name.touched">
+            Name is required.
+        </div>
+
+        <input type="email" name="email" [(ngModel)]="user.email" placeholder="Email" required email #email="ngModel" />
+        <div class="error" *ngIf="email.invalid && email.touched">
+            <div *ngIf="email.errors?.['required']">Email is required.</div>
+            <div *ngIf="email.errors?.['email']">Enter a valid email.</div>
+        </div>
+
+        <input type="text" name="role" [(ngModel)]="user.role" placeholder="Role" required minlength="3"
+            #role="ngModel" />
+        <div class="error" *ngIf="role.invalid && role.touched">
+            <div *ngIf="role.errors?.['required']">Role is required.</div>
+            <div *ngIf="role.errors?.['minlength']">
+                Role must be at least 3 characters.
+            </div>
+        </div>
+
+        <button type="submit" [disabled]="userForm.invalid">
+            {{ user.id ? 'Update' : 'Add' }} User </button>
+    </form>
+    <!-- 
+    <h3>User List</h3>
+    <ul>
+        <li *ngFor="let u of users">
+            {{ u.name }} ({{ u.email }})
+            <button (click)="editUser(u)">Edit</button>
+            <button (click)="deleteUser(u.id)">Delete</button>
+        </li>
+    </ul> -->
+</div>
